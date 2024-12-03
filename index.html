@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css"/>
+        <title>Chess Game</title>
+    </head>
+    <body>
+        <main>
+            <div id="game">
+                <div id="black-player" class="player"><span class="player-text">Black</span><span id="black-timer" class="timer"></span></div>
+                <div class="board">
+                    <div id="options-menu">
+                        <button id="close-options-menu-button">X</button>
+                        <div class="options-option">
+                            <label for="auto-swap">Auto-swap sides</label>
+                            <input type="checkbox" name="auto-swap" id="auto-swap"/>
+                        </div>
+                        <div class="options-option">
+                            <label for="timer-toggle">Timer</label>
+                            <input type="checkbox" name="timer-toggle" id="timer-toggle" checked/>
+                        </div>
+                        <button id="new-game-button">New Game</button>
+                    </div>
+                    <div id="promotion-pop-up">
+                        <div class="promotion-option-container-container">
+                            <div class="promotion-option-container">
+                                <input type="radio" name="promotion-option" value="bishop" id="promotion-bishop"/>
+                                <label for="promotion-bishop">♗</label>    
+                            </div>
+                            <div class="promotion-option-container">
+                                <input type="radio" name="promotion-option" value="rook" id="promotion-rook"/>
+                                <label for="promotion-rook">♖</label>    
+                            </div>
+                            <div class="promotion-option-container">
+                                <input type="radio" name="promotion-option" value="knight" id="promotion-knight"/>
+                                <label for="promotion-knight">♘</label>    
+                            </div>
+                            <div class="promotion-option-container">
+                                <input type="radio" name="promotion-option" value="queen" id="promotion-queen" checked/>
+                                <label for="promotion-queen">♕</label>    
+                            </div>
+                        </div>
+                        <button id="promotion-select-button">Select</button>
+                    </div>
+                    <div id="game-end-screen">
+                        <div id="winner"></div>
+                        <div id="reason"></div>
+                        <button id="restart">Play again!</button>
+                    </div>
+                </div>
+                <div id="white-player" class="player"><span class="player-text">White</span><span id="white-timer" class="timer"></span></div>
+            </div>
+            <div id="game-details">
+                <div id="game-mode">Player vs Player (local)</div>
+                <div id="game-history"></div>
+                <div id="options">
+                    <div id="options-buttons">
+                        <button id="swap-side">&#8693</button>
+                        <button id="options-menu-button">&#8759</button>
+                    </div>
+                    <div id="history-buttons">
+                        <button id="backwards">&#8678</button>
+                        <button id="forwards">&#8680</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="scripts/test.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
